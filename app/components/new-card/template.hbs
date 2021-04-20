@@ -1,0 +1,87 @@
+<div class="new-card">
+  <card-header>
+    <div class="new-type">
+      {{#if editWorkType}}
+        <label for={{concat "edit-type"}}>Select Work Type:</label>
+        <select class="select" onchange={{action this.changeWorkType value='target.value'}}>
+          {{#each @workTypesList as |workType|}}
+            <option id={{concat "edit-type" @idForCard}} value={{workType.workTitle}} selected={{if (eq workType.workTitle this.assignmentObject.workType) 'selected'}}>{{workType.workTitle}}</option>
+          {{/each}}
+        </select>
+      {{else}}
+        <span>Work Type <span {{on 'click' (action this.clickToEdit 'editWorkType')}}><FaIcon @icon="edit" /></span>:</span>
+        <span class="card-title">{{this.assignmentObject.workType}}</span>
+      {{/if}}
+    </div>
+    <div class="new-title">
+      {{#if editTitle}}
+        <label for={{concat "edit-title" @idForCard}}>Title:</label>
+        <Textarea
+          @id={{concat "edit-title" @idForCard}}
+          @value={{this.assignmentObject.title}}
+          @enter={{(action this.enterToUpdate 'editTitle')}}
+          rows='5'
+          cols='30'
+        />
+      {{else}}
+        <span>Title <span {{on 'click' (action this.clickToEdit 'editTitle')}}><FaIcon @icon="edit" /></span>:</span>
+        <span class="card-title">{{this.assignmentObject.title}}</span>
+      {{/if}}
+    </div>
+  </card-header>
+  <card-main>
+    <div class="card-separator">
+      <hr/>
+    </div>
+    <div class="card-description">
+      <span>Description <span {{on 'click' (action this.clickToEdit 'editDescription')}}><FaIcon @icon="edit" /></span>:</span>
+      <div>
+        {{#if this.editDescription}}
+          <Textarea
+            @id={{concat "edit-description" @idForCard}}
+            @value={{this.assignmentObject.description}}
+            @enter={{(action this.enterToUpdate 'editDescription')}}
+            rows="4"
+            cols="30"
+          />
+        {{else}}
+          <span>{{this.assignmentObject.description}}</span>
+        {{/if}}
+      </div>
+    </div>
+    <div class="card-status">
+      <span>Status <span {{on 'click' (action this.clickToEdit 'editStatus')}}><FaIcon @icon="edit" /></span>:</span>
+      <div>
+        {{#if this.editStatus}}
+          <Textarea
+            @id={{concat "edit-status" @idForCard}}
+            @value={{this.assignmentObject.status}}
+            @enter={{(action this.enterToUpdate 'editStatus')}}
+            rows="1"
+            cols="30"
+          />
+        {{else}}
+          <span>{{this.assignmentObject.status}}</span>
+        {{/if}}
+      </div>
+    </div>
+    <div class="card-assigned">
+      <span>Assigned To:</span>
+      <span>{{@assignedTo.fullName}} ({{@assignedTo.role}})</span>
+    </div>
+    <div class="card-created">
+      <span>Created By:</span>
+      <span>{{@createdBy.fullName}} ({{@createdBy.role}})</span>
+    </div>
+  </card-main>
+</div>
+
+<div class="card-buttons">
+  <div class="card-delete">
+    <button class="button-delete" title="Trash New Assignment" {{on 'click' (action this.clickToDelete)}}><FaIcon @icon="trash-alt" /></button>
+  </div>
+
+  <div class="card-save">
+    <button disabled={{(not this.allowSave)}} class="button-save" {{on 'click' (action this.addNewAssignment)}}>Add New Assignment</button>
+  </div>
+</div>

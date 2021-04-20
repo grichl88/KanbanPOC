@@ -1,0 +1,177 @@
+[
+  {
+    "type": "assignment",
+    "id": "1",
+    "title": "Bug in the system",
+    "status": "Open",
+    "description": "This bug always occurs",
+    "workType": "Defect",
+    "createDate": "04/16/2021",
+    "startDate": null,
+    "closeDate": null,
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    }
+  },
+  {
+    "type": "assignment",
+    "id": "2",
+    "title": "Another Bug in the system :/",
+    "status": "Open",
+    "description": "This bug also always occurs",
+    "workType": "Defect",
+    "createDate": "04/15/2021",
+    "startDate": "04/16/2021",
+    "closeDate": null,
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    }
+  },
+  {
+    "type": "assignment",
+    "id": "3",
+    "title": "New Feature",
+    "status": "Open",
+    "description": "Draggable feature",
+    "workType": "Story",
+    "createDate": "04/16/2021",
+    "startDate": null,
+    "closeDate": null,
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    }
+  },
+  {
+    "type": "assignment",
+    "id": "4",
+    "title": "New Feature",
+    "status": "Open",
+    "description": "Another Feature",
+    "workType": "Story",
+    "createDate": "04/16/2021",
+    "startDate": null,
+    "closeDate": null,
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    }
+  },
+  {
+    "type": "assignment",
+    "id": "5",
+    "title": "Auto Test",
+    "status": "Open",
+    "description": "Task to create tests",
+    "workType": "Task",
+    "assignedTo": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "4",
+      "title": "Project Manager",
+      "firstName": "Project",
+      "lastName": "Manager"
+    },
+    "createDate": "04/17/2021",
+    "startDate": null,
+    "closeDate": null
+  },
+  {
+    "type": "assignment",
+    "id": "6",
+    "title": "More Features",
+    "status": "Open",
+    "description": "Feature for Scrolling",
+    "workType": "Story",
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "2",
+      "title": "Project Manager",
+      "firstName": "Project",
+      "lastName": "Manager"
+    },
+    "createDate": "04/17/2021",
+    "startDate": null,
+    "closeDate": null
+  },
+  {
+    "type": "assignment",
+    "id": "7",
+    "title": "Feature",
+    "status": "Open",
+    "description": "Feature to add new items",
+    "workType": "Story",
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "2",
+      "title": "Project Manager",
+      "firstName": "Project",
+      "lastName": "Manager"
+    },
+    "createDate": "04/17/2021",
+    "startDate": null,
+    "closeDate": null
+  }
+]

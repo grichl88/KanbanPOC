@@ -1,0 +1,14 @@
+@import "variables";
+@import "kanapp";
+
+/* imports from general */
+@import "general/board";
+
+/* imports from components */
+@import "components/assignment-card";
+@import "components/modal-dialog";
+@import "components/editable";
+
+/* imports from library*/
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";

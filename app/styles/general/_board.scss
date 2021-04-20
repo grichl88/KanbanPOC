@@ -1,0 +1,18 @@
+.board-container {
+  display: grid;
+  height: auto;
+  grid-gap: 20px;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  grid-template-rows: minmax(150px, 200px);
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px,1fr);
+  overflow-x: auto;
+  overflow-y: scroll;
+
+  .card-column {
+    .board-card {
+      margin-bottom: 10px;
+    }
+  }
+}

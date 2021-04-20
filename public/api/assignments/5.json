@@ -1,0 +1,26 @@
+{
+  "assignment": {
+    "id": "5",
+    "title": "Auto Test",
+    "status": "Open",
+    "description": "Task to create tests",
+    "workType": "Task",
+    "assignedTo": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "4",
+      "title": "Project Manager",
+      "firstName": "Project",
+      "lastName": "Manager"
+    },
+    "createDate": "04/17/2021",
+    "startDate": null,
+    "closeDate": null
+  }
+}

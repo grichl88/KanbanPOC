@@ -1,0 +1,56 @@
+<div class="board-container">
+  <div>
+    <span>Select type of work item</span>
+    <p>
+      <button {{on 'click' (action this.selectWorkType 'All')}}>All</button>
+      {{#each this.workTypesList as |workType|}}
+        <button {{on 'click' (action this.selectWorkType workType.workTitle)}}>{{workType.workTitle}}</button>
+      {{/each}}
+      {{#if this.addingNewWorkType}}
+        {{input type="text" value=this.newWorkType placeholder="enter text here"}}
+        <button disabled={{if (eq newWorkType '') true}} class="save-button" {{on 'click' (action this.saveNewWorkType)}}><FaIcon @icon="save" /></button>
+      {{else}}
+        <button {{on 'click' (action this.addNewWorkType)}}>+</button>
+      {{/if}}
+    </p>
+  </div>
+  {{#each this.columnsTypeList as |workType|}}
+    <div class="card-column">
+      <h2>{{workType.workTitle}}</h2>
+      {{#each (filterlist this.assignmentList workType.workTitle 'workType') as |assignment|}}
+        <div class="board-card">
+          <AssignmentCard
+            @title={{assignment.title}}
+            @status={{assignment.status}}
+            @workType={{assignment.workType}}
+            @assignedTo={{assignment.assignedTo}}
+            @createdBy={{assignment.createdBy}}
+            @description={{assignment.description}}
+            @idForCard={{assignment.id}}
+            @updateStatus={{this.updateStatus}}
+            @updateDescription={{this.updateDescription}}
+            @updateCard={{this.updateCard}}
+            @deleteAssignment={{this.deleteAssignment}}
+            @workTypesList={{this.workTypesList}}
+          />
+        </div>
+      {{else}}
+        No work items yet! Create some!
+      {{/each}}
+      <div class="board-card">
+        {{#if creatingNewAssignment}}
+          <NewCard
+            @createNewAssignment={{this.createNewAssignment}}
+            @idForCard={{guidFor}}
+            @saveNewAssignment={{this.saveNewAssignment}}
+            @deleteNewAssignment={{this.deleteNewAssignment}}
+            @workType={{workType.workTitle}}
+            @workTypesList={{this.workTypesList}}
+          />
+        {{else}}
+          <button {{on 'click' (action this.addNewAssignment)}}>+</button>
+        {{/if}}
+      </div>
+    </div>
+  {{/each}}
+</div>

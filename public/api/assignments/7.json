@@ -1,0 +1,26 @@
+{
+  "assignment": {
+    "id": "7",
+    "title": "Feature",
+    "status": "Open",
+    "description": "Feature to add new items",
+    "workType": "Story",
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "2",
+      "title": "Project Manager",
+      "firstName": "Project",
+      "lastName": "Manager"
+    },
+    "createDate": "04/17/2021",
+    "startDate": null,
+    "closeDate": null
+  }
+}

@@ -1,0 +1,16 @@
+$black: #000;
+$white: #fff;
+$red: #D60B0B;
+
+$body-bg: $white !default;
+
+$text-color: $white !default;
+$font-family-sans-serif: Arial, sans-serif;
+$font-family-base: $font-family-sans-serif !default;
+$font-size-base: 14px !default;
+
+$link-color: #0998B7;
+$link-hover-color: darken($link-color, 20%) !default;
+$link-hover-decoration: underline !important;
+$dash-size: 5px;
+$fill-color: $white;

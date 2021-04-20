@@ -1,0 +1,26 @@
+{
+  "assignment": {
+    "id": "3",
+    "title": "New Feature",
+    "status": "Open",
+    "description": "Another Feature",
+    "workType": "Story",
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    },
+    "createDate": "04/15/2021",
+    "startDate": null,
+    "closeDate": null
+  }
+}

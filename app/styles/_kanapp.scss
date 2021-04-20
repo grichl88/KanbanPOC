@@ -1,0 +1,44 @@
+html, body {
+  background: darken($fill-color, 5%);
+  margin: 0;
+  height: 100%;
+}
+
+div#global-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px auto 40px;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+
+  main {
+    display: grid;
+    grid-area: main;
+  }
+
+  header {
+    grid-area: header;
+
+    hr {
+      margin: 0;
+    }
+  }
+
+  footer {
+    grid-area: footer;
+    
+    hr {
+      margin-bottom: 2px;
+    }
+    h3 {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,18 @@
+.editable {
+  display: grid;
+  grid-template-areas:
+  "a a a a a a a a a"
+  "b b b b b b b b b"
+  "c c c c c c c c c";
+
+  .edit-header {
+    grid-area: a;
+    justify-self: end;
+  }
+
+  .edit-body {
+    grid-area: b;
+    margin-bottom: 20px;
+  }
+
+}

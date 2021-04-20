@@ -1,0 +1,26 @@
+{
+  "assignment": {
+    "id": "1",
+    "title": "Bug in the system",
+    "status": "Open",
+    "description": "This bug always occurs",
+    "workType": "Defect",
+    "assignedTo": {
+      "type": "user",
+      "id": "1",
+      "title": "Developer",
+      "firstName": "Richard",
+      "lastName": "Garcia"
+    },
+    "createdBy": {
+      "type": "user",
+      "id": "3",
+      "title": "Tester",
+      "firstName": "Richard's",
+      "lastName": "Tester"
+    },
+    "createDate": "04/16/2021",
+    "startDate": null,
+    "closeDate": null
+  }
+}

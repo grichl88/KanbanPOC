@@ -1,0 +1,80 @@
+.card, .new-card {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+  "card-header"
+  "card-main";
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+    0 5px 15px 0 rgba(0,0,0,0.08);
+  border-radius: 0.5rem;
+  border-left: 0 solid $red;
+  transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  padding: 0px 6px;
+
+  &:hover {
+    height: calc(100% + 160px);
+    padding-left: 0.5rem;
+    border-left: 0.5rem solid $black;
+  }
+  card-main {
+    display: grid;
+    grid-gap: 3px;
+    grid-area: card-main;
+    grid-template-rows: 10px minmax(80px, auto) 50px minmax(50px, auto) minmax(50px, auto);
+  }
+
+  card-header {
+    display: grid;
+    grid-area: card-header;
+    grid-template-columns: auto;
+    grid-template-rows: minmax(50px, auto) 30px;
+    grid-template-areas:
+    "a a a a a a a a b"
+    "a a a a a a a a b";
+
+    h2.card-title {
+      grid-area: a;
+      align-self: start;
+      margin: 0;
+      height: 50px;
+    }
+    .card-buttons {
+      grid-area: b;
+      justify-self: end;
+    }
+    button.button-delete, button.button-edit {
+      font-size: 15px;
+      width: 30px;
+    }
+    hr {
+      grid-area: c;
+      margin: 5px 0 0 0;
+    }
+  }
+
+  .work-type-header {
+    margin-top: 4px;
+  }
+}
+
+.new-card {
+  card-header {
+    grid-template-areas:
+    "a a a a"
+    "b b b b";
+
+    .new-title {
+      grid-area: a;
+      align-self: start;
+      margin: 0;
+      height: 50px;
+    }
+    .new-type {
+      grid-area: b;
+      align-self: start;
+      margin: 0;
+      height: 10px;
+    }
+  }
+}
